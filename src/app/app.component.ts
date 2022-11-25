@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
+  success: boolean = true;
+
+  toggleSuccess(): void {
+    this.success = (this.success == true) ? false : true;
+  }
+
+  ngOnInit(): void {
+
+  }
+
 }

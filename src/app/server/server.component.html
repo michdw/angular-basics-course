@@ -1,1 +1,4 @@
 <p [ngClass]="{online: serverStatus === 'online'}" [ngStyle]="{backgroundColor: this.getColor()}">server {{serverId}} is {{getServerStatus()}}</p>
+<button (click)="toggleDetails()">Toggle details</button>
+<p [ngStyle]="{visibility: this.detailsToggle}">{{serverId}} tuna</p>
+

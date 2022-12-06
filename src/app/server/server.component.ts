@@ -9,6 +9,7 @@ export class ServerComponent {
 
   serverId: number = 1;
   serverStatus: string = 'offline';
+  detailsToggle: string = 'hidden'
 
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -19,5 +20,10 @@ export class ServerComponent {
   }
 
   getColor() {
-    return this.serverStatus === 'online' ? 'green' : 'lightgray' }
+    return this.serverStatus === 'online' ? 'green' : 'lightgray'
+  }
+
+  toggleDetails() {
+    this.detailsToggle = (this.detailsToggle == 'visible') ? 'hidden' : 'visible';
+  }
 }
